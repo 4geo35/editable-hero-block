@@ -1,0 +1,28 @@
+{
+    "name": "4geo35/editable-hero-block",
+    "description": "Add hero block",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir",
+            "email": "aweram-team@yanex.ru"
+        }
+    ],
+    "require": {
+        "4geo35/editable-blocks": "@dev",
+        "4geo35/request-form": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "GIS\\EditableHeroBlock\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GIS\\EditableHeroBlock\\EditableHeroBlockServiceProvider"
+            ]
+        }
+    }
+}
