@@ -4,6 +4,7 @@ namespace GIS\EditableHeroBlock\Livewire\Admin\Types;
 
 use GIS\EditableBlocks\Traits\CheckBlockAuthTrait;
 use GIS\EditableBlocks\Traits\EditBlockTrait;
+use GIS\EditableBlocks\Traits\PlaceholderBlockTrait;
 use GIS\EditableHeroBlock\Interfaces\HeroBlockRecordInterface;
 use GIS\EditableHeroBlock\Models\HeroBlockRecord;
 use GIS\RequestForm\Facades\FormActions;
@@ -14,7 +15,7 @@ use Livewire\WithFileUploads;
 
 class HeroWire extends Component
 {
-    use WithFileUploads, EditBlockTrait, CheckBlockAuthTrait;
+    use WithFileUploads, EditBlockTrait, CheckBlockAuthTrait, PlaceholderBlockTrait;
 
     public bool $displayData = false;
     public bool $displayDelete = false;
