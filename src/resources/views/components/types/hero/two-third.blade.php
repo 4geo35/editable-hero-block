@@ -1,4 +1,4 @@
-@props(["item"])
+@props(["item", "useH1"])
 @php($hasImage = $item->recordable->image_id)
 <div class="min-h-screen relative py-indent-double flex flex-col justify-center w-full">
     @include("ehb::web.types.hero.includes.bg-image")

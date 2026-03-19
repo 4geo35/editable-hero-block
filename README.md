@@ -8,3 +8,8 @@
         "./vendor/4geo35/editable-hero-block/src/resources/views/web/**/*.blade.php",` в `tailwind.config.js`, созданный в пакете `tailwindcss-theme`.
 
 Запустить миграции для создания таблиц `php artisan migrate`
+
+
+### Примечание
+
+По умолчанию блок не использует `h1`, чтобы в нем появился тег, нужно при выводе блока передать параметр `useH1` в значении `true`, тогда для первого элемента блока `div` переключится на `h1`.

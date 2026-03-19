@@ -3,7 +3,7 @@
 return [
     "availableTypes" => [
         "hero" => [
-            "title" => "УТП",
+            "title" => env("EDITABLE_HERO_BLOCK_TITLE", "УТП"),
             "admin" => "ehb-hero",
             "render" => "ehb::types.hero",
         ],
