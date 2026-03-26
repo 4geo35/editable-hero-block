@@ -11,6 +11,7 @@
                 @include("ehb::admin.types.hero.item")
                 @include("eb::admin.types.includes.help-info")
             </div>
+            @includeIf("ebtns::admin.btn-component", ["blockItem" => $item])
         </div>
     @endforeach
 </div>

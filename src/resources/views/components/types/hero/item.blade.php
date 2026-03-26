@@ -8,6 +8,7 @@
                 @include("ehb::web.types.hero.includes.title")
                 @include("ehb::web.types.hero.includes.description")
                 @include("ehb::web.types.hero.includes.form")
+                @includeIf("ebtns::web.render-buttons", ["blockItem" => $item])
             </div>
         </div>
     </div>
