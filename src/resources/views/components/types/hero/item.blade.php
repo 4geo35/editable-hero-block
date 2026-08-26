@@ -1,6 +1,6 @@
-@props(["item", "useH1"])
+@props(["item", "useH1", "minHClass"])
 @php($hasImage = $item->recordable->image_id)
-<div class="min-h-screen relative py-indent-double flex flex-col justify-center w-full">
+<div class="{{ $minHClass }} relative py-indent-double flex flex-col justify-center w-full">
     @include("ehb::web.types.hero.includes.bg-image")
     <div class="container relative z-10 my-indent-double">
         <div class="row">

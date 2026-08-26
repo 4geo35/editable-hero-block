@@ -1,4 +1,4 @@
-@props(["block", "isFullPage" => true, "useH1" => false])
+@props(["block", "isFullPage" => true, "useH1" => false, "minHClass" => "min-h-screen"])
 @if ($block->items->count())
     @if ($block->render_title)
         @if ($isFullPage)
@@ -12,8 +12,8 @@
     <div {{ $attributes->merge(["class" => "flex flex-col gap-indent"]) }}>
         @foreach($block->items as $item)
             @php($useH1 = $useH1 && $loop->first)
-            @if ($isFullPage) <x-ehb::types.hero.item :$item :$useH1 />
-            @else <x-ehb::types.hero.two-third :$item :$useH1 />
+            @if ($isFullPage) <x-ehb::types.hero.item :$item :$useH1 :$minHClass />
+            @else <x-ehb::types.hero.two-third :$item :$useH1 :$minHClass />
             @endif
         @endforeach
     </div>
