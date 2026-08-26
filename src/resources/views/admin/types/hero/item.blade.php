@@ -7,23 +7,23 @@
                  class="h-full w-full object-cover object-top relative z-0 brightness-50 blur-[.05rem]">
         </div>
     @endif
-    <div class="relative z-10 mt-indent-double mx-indent text-light">
-        @if ($item->title)
-            <h1 class="font-medium text-5xl sm:text-7xl mb-indent w-full lg:w-2/3 2xl:w-1/2">
-                {{ $item->title }}
-            </h1>
-        @endif
-        @if ($item->recordable->description)
-            <div class="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 xl:w-2/5 2xl:w-1/3 mb-indent-lg block">
-                <div class="prose prose-lg prose-p:leading-6 !text-light max-w-none">
+    <div class="relative z-10 my-indent-double">
+        <div class="w-full xl:w-9/12 2xl:w-7/12 text-light px-indent-half">
+            @if ($item->title)
+                <div class="font-semibold text-4xl md:text-5xl mb-indent">
+                    {{ $item->title }}
+                </div>
+            @endif
+            @if ($item->recordable->description)
+                <div class="prose md:prose-lg prose-p:leading-6 !text-light max-w-none mb-indent-lg">
                     {!! $item->recordable->markdown !!}
                 </div>
-            </div>
-        @endif
-        @if ($item->recordable->form)
-            <button type="button" class="btn btn-light w-full sm:w-auto">
-                {{ $item->recordable->button_text ?? "Оставить заявку" }}
-            </button>
-        @endif
+            @endif
+            @if ($item->recordable->form)
+                <button type="button" class="btn btn-light w-full xs:w-auto">
+                    {{ $item->recordable->button_text ?? "Оставить заявку" }}
+                </button>
+            @endif
+        </div>
     </div>
 </div>
